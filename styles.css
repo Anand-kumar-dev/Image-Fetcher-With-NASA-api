@@ -21,42 +21,13 @@ body {
     overflow-x: hidden;
 }
 
-
-main {
-    flex: 1;
-}
-
-.container2 {
-    flex-grow: 1;
-    transition: 1s linear;
-}
-
-
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 0px;
-    width: 100%;
-    margin-top: auto;
-}
-
-.foot ul {
-    display: flex;
-    padding: 23px;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    gap: 30px;
-    border-top: 2px solid grey;
-}
-
 header {
     background: black;
     position: fixed;
     top: 0;
     z-index: 1000;
-
+    width: 100%;
+    height: 80px;
 }
 
 .nav {
@@ -64,6 +35,8 @@ header {
     display: flex;
     justify-content: space-between;
     height: 80px;
+    padding: 0 20px;
+    align-items: center;
 }
 
 .logo img {
@@ -99,7 +72,12 @@ header {
 .ul ul li:hover {
     transform: scale(1.2);
     filter: brightness(1.5);
+}
 
+
+main {
+    flex: 1;
+    padding-top: 80px; 
 }
 
 .container {
@@ -107,6 +85,7 @@ header {
     height: 90vh;
     display: flex;
     flex-wrap: wrap;
+    padding-top: 80px; 
 }
 
 .right {
@@ -116,7 +95,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    margin-top: 80px; 
 }
 
 .right h1 {
@@ -124,23 +103,24 @@ header {
     padding-left: 30px;
     padding-bottom: 10px;
 }
-svg path{
+
+svg path {
     fill: transparent;
     stroke: #fff;
     stroke-width: 1;
     stroke-dashoffset: 50;
     stroke-dasharray: 50;
     animation: textAnimation 4s ease-in-out forwards;
-
 }
-@keyframes textAnimation{
-    0%{
+
+@keyframes textAnimation {
+    0% {
         stroke-dashoffset: 50;
     }
-    70%{
+    70% {
         fill: transparent;
     }
-    100%{
+    100% {
         fill: #fff;
         stroke-dashoffset: 0;
     }
@@ -157,7 +137,8 @@ svg path{
     padding: 20px;
     gap: 10px;
 }
-.image{
+
+.image {
     border-bottom: 8px;
     height: 80%;
     width: 90%;
@@ -196,8 +177,6 @@ svg path{
     width: 500px;
     height: 500px;
 }
-
-
 
 .apoddiv,
 .epicdiv,
@@ -249,17 +228,100 @@ button:disabled {
     background: #ccc;
 }
 
-/* #minicircle {
-    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
-    width: 10px;
-    height: 10px;
-    position:fixed;
-    z-index: 99999;
-    transition: 2ms;
-    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
-    background-color: #fff;
-} */
-.image{
+.image {
     transition: 0.5s ease-in-out;
+}
+.foot ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 35px;
+    border-top: 2px solid white;
+
+}
+.foot ul li{
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .ul {
+        width: 100%;
+    }
+
+    .ul ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .ul ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+        padding-top: 120px; 
+    }
+
+    .right, .left {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .right h1 {
+        font-size: 40px;
+        padding-left: 10px;
+    }
+
+    .container2 {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+    .card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .apoddiv,
+    .epicdiv,
+    .marsdiv {
+        width: 100%;
+    }
+
+    .nasadiv {
+        max-width: 100%;
+    }
+
+    .foot ul{
+        display: flex;
+        gap: 10px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .right h1 {
+        font-size: 30px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .nasadiv {
+        padding: 10px;
+    }
+
+    button {
+        padding: 8px;
+    }
 }
