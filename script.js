@@ -162,7 +162,7 @@ async function fetching(query) {
       console.log(images.description);
     }
 
-    preloadImages();
+    // preloadImages();
     createViewer();
     updateImage();
   } catch (error) {
@@ -170,12 +170,12 @@ async function fetching(query) {
   }
 }
 
-function preloadImages() {
-  images.forEach((image) => {
-    const img = new Image();
-    img.src = image.url;
-  });
-}
+// function preloadImages() {
+//   images.forEach((image) => {
+//     const img = new Image();
+//     img.src = image.url;
+//   });
+// }
 
 function createViewer() {
   
@@ -259,3 +259,30 @@ function search() {
 
 
 nasa.addEventListener("click", search);
+
+
+
+// circle follower
+
+
+
+// function circleMouseFollower() {
+//   window.addEventListener("mousemove", function (dets) {
+//     document.querySelector("#minicircle").style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)`;
+//   });
+// }
+
+// circleMouseFollower()
+
+Shery.mouseFollower({
+  
+  skew: true,
+  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  duration: .2,
+});
+  
+Shery.makeMagnet(".mag" /* Element to target.*/, {
+  //Parameters are optional.
+  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  duration: 1,
+});
