@@ -209,6 +209,9 @@ svg path {
     height: auto;
     border-radius: 5px;
 }
+#nasadescription{
+color:black;
+}
 
 .buttons {
     margin-top: 10px;
